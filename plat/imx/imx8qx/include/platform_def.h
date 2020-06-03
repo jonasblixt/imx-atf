@@ -78,12 +78,12 @@
 #define COUNTER_FREQUENCY		8000000
 
 /* non-secure u-boot base */
-#define PLAT_NS_IMAGE_OFFSET		0x80020000
+#define PLAT_NS_IMAGE_OFFSET		0x82000000
 
 /* enable it to make debug message to SC console */
 #define SC_CONSOLE			0
 
-#define DEBUG_CONSOLE			0
+#define DEBUG_CONSOLE			1
 
 #ifdef TEE_IMX8
 #define DEBUG_CONSOLE_A35		1

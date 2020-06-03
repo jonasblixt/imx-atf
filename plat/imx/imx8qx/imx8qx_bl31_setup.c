@@ -429,7 +429,9 @@ void bl31_early_platform_setup2(u_register_t arg0, u_register_t arg1,
 	sc_pm_set_resource_power_mode(ipc_handle, SC_R_MU_4A, SC_PM_PW_MODE_ON);
 #endif
 
-	bl33_image_ep_info.pc = PLAT_NS_IMAGE_OFFSET;
+	bl33_image_ep_info.pc = 0x82000000;
+    bl33_image_ep_info.args.arg0 = 0x80800000;
+
 	bl33_image_ep_info.spsr = get_spsr_for_bl33_entry();
 #ifdef TEE_IMX8
 	SET_PARAM_HEAD(&bl32_image_ep_info, PARAM_EP, VERSION_1, 0);
